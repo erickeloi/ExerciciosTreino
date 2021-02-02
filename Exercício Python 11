@@ -1,6 +1,6 @@
 #Desafio 11
 #Programa Tinta para a parede
-#Lê a altura e comprimento de uma parede, calcula sua área e a quantidade de tinta necessária para pintá-la. 1L tinta = 2m2
+#Lê a altura e comprimento de uma parede, calcula sua área e a quantidade de tinta necessária para pintá-la. 1L tinta = 2m2.
 altura = float(input("Digite a altura da parede, em metros: "))
 comprimento = float(input("Digite o comprimento da parede, em metros: "))
 area = altura*comprimento
