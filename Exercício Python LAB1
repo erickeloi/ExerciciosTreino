@@ -1,4 +1,4 @@
-# Exercício Python
+# Exercício Python 1
 # Área do Retângulo
 # Dado as informações de base e altura de um retângulo, calcula e exibe sua área.
 print(" Programa de Cálculo da área de um retângulo \n Favor usar o ponto '.' ao invés de virgula ',' para valores do conjunto Fracionário ou Real ")
