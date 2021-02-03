@@ -5,8 +5,7 @@
 # Quantas letras tem o primeiro nome
 
 nome = str(input("Digite aqui seu nome completo: "))
-nomejunto = nome.strip().split()
-nomejunto = ''.join(nomejunto)
+nomejunto = nome.replace(' ', '')
 print(f"Seu nome em letras MAIÚSCULAS é: {nome.upper()}")
 print(f"Seu nome em letras minúsculas é: {nome.lower()}")
 print(f"Seu nome possui {len(nomejunto)} letras, desconsiderando os espaços")
