@@ -1,4 +1,4 @@
-# # Desafio Python 28:
+# Desafio Python 28:
 # Advinhe qual número, de 1 a 5, o computador pensou.
 # Dá pra fazer com um contador e ver quantas vezes o usuário tentou,
 # Mas ainda não cheguei nessa função no python, usar o while
@@ -9,3 +9,4 @@ if num == advinha:
     print("Acertou!!!")
 else:
     print("Tente Novamente, sua cabeça é tão grande que parece a do MegaMente!!!")
+    print(f"Eu pensei no número {num} e não no {advinha}, seu bobão!!!")
