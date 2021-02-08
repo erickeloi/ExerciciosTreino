@@ -9,7 +9,7 @@ valorproduto = float(input("Digite o valor do produto: "))
 forma = int(input("Digite 1 para pagar a vista no Dinheiro/cheque (10% de desconto)\n"
                   "Digite 2 para pagar a vista no Cartão (5% de desconto)\n"
                   "Digite 3 para pagar em até 2x no cartão (Preço normal)\n"
-                  "Digite 4 para pagar em 3x ou mais no cartão (20% de juros)\n"
+                  "Digite 4 para pagar em 3x ou mais no cartão (acrescimo de 20% de juros)\n"
                   "Opção: "))
 if forma == 1:
     print(f"A vista no Dinheiro/cheque (10% de desconto),\n"
@@ -23,8 +23,11 @@ elif forma == 3:
     print(f"Até 2x no Cartão (Preço normal)\n"
           f"O produto ficará {valorproduto}R$ em até 2x no cartão")
 elif forma == 4:
-    print(f"Em 3x ou mais no Cartão (20% de juros)\n"
+    parcelas = int(input("Quantas parcelas?"))
+    print(f"Em 3x ou mais no Cartão (acrescimo de 20% de juros)\n"
           f"O produto de {valorproduto}R$, com juros de 20%, ficará por {valorproduto*1.2}R$\n"
-          f"Ou seja, aumento de {valorproduto*0.2}R$ no preço final do produto, parcelado em 3x ou mais.")
+          f"E, você pagara parcelas de {valorproduto*1.2/parcelas}R$ por {parcelas} meses\n"
+          f"Ou seja, aumento de {valorproduto*0.2}R$ no preço final do produto, parcelado em {parcelas} vezes .")
 else:
     print("Digite uma opção válida")
+    
