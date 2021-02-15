@@ -8,6 +8,6 @@ r = float(input("Digite a razão dessa P.A.: "))
 an = 0
 contador = 0
 while contador != 10:
-    contador += 1
     an = a1 + (contador * r)
+    contador += 1
     print(f"{an} é o termo de número {contador}")
