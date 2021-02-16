@@ -11,7 +11,7 @@ while 69 != advinha != num:
     if num == advinha:
         print("Acertou!!!")
         print(f"O número que eu pensei foi o \033[33m'{num}'\033[m")
-        print(f"Você tentou já tentou \033[31m{contador}\033[m vezes")
+        print(f"Você tentou \033[31m{contador}\033[m vezes")
         if contador == 1:
             print("Ganhou de primeira!!!, Parabéns!!!")
             print(f"Pensei no número {num} mesmo")
