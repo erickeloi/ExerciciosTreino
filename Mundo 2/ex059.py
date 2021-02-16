@@ -74,5 +74,7 @@ Digite sua Opção: '''))
 
         print("\nAll IN ONE!")
         continuar = print(input("Aperte enter ou digite qualquer coisa para continuar: "))
+    else:
+        print("Digite uma opção válida: ")
 
 print("Fim")
