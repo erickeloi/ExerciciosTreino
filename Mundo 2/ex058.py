@@ -14,7 +14,6 @@ while 69 != advinha != num:
         print(f"Você tentou \033[31m{contador}\033[m vezes")
         if contador == 1:
             print("Ganhou de primeira!!!, Parabéns!!!")
-            print(f"Pensei no número {num} mesmo")
     elif advinha == 69:
         print("Tente novamente mais tarde então! obrigado")
     elif num != advinha:
