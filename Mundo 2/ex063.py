@@ -12,7 +12,7 @@ if termos == 1:
     print(" 0 ")
 elif termos == 2:
     print(" 0 -> 1")
-else:
+elif termos >= 3:
     print(" 0 -> 1 ->", end='')
     while contador <= termos:
         termo3 = termo1 + termo2
@@ -20,4 +20,6 @@ else:
         termo1 = termo2
         termo2 = termo3
         contador += 1
-print("FIM")
+else:
+    print("Digite um valor válido!")
+print(" FIM")
