@@ -1,7 +1,7 @@
 # Exercício 67
 # Faça um programa que mostre a tabuada de vários números, um de cada vez, para cada valor digitado pelo usuário.
 # O programa será interrompido quando o número solicitado for negativo.
-print("Programa Tabuada de números inteiros 'X'")
+print("Programa Tabuada de números inteiros não negativos 'X'")
 while True:
     tabuada = int(input("Digite um número: "))
     if tabuada < 0:
