@@ -6,7 +6,8 @@
 # C) qual é o nome do produto mais barato.
 contador_produto_maior1000 = total = contador = preco_mais_barato = 0
 nome_produto_barato = ""
-print("Sistema de Preços da Loja !")
+print("-"*20, "Lojas Barato D+", "-"*20)
+
 while True:
     nome = str(input("Digite o nome do produto: "))
     preco = float(input(("Digite o preço do produto: ")))
@@ -27,5 +28,5 @@ while True:
     if continuar == "N":
         break
 print("Fim do programa!")
-print(f"O total gasto foi {total}\nNúmeros de produtos que custam mais de R$1000: {contador_produto_maior1000} produto(s)")
+print(f"O total gasto foi {total}R$\nNúmeros de produtos que custam mais de R$1000: {contador_produto_maior1000} produto(s)")
 print(f"O nome do produto mais barato é '{nome_produto_barato}', custando: {preco_mais_barato}R$")
