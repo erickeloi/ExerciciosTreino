@@ -21,7 +21,7 @@ for palavra in palavras:
 
     
 # Depois de assistir a resolução do Prof. Guanabara vi que o código dele teve uma sacada muito boa,
-# Ele deu o insight que essas letras das palavras também são elemtentos como as palavras nessa tupla.
+# Ele deu o insight que essas letras das palavras também são elementos como as palavras nessa tupla.
 # O código dele é tipo o seguinte:
 #
 # palavras = ("coisa", "casa", "tempo", "ano", "dia", "vez", "homem", "senhor", "senhora", "moço", "moça")
