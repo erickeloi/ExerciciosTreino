@@ -18,3 +18,17 @@ for palavra in palavras:
         print(f"u", end="")
     print(" ")
 
+
+    
+# Depois de assistir a resolução do Prof. Guanabara vi que o código dele teve uma sacada muito boa,
+# Ele deu o insight que essas letras das palavras também são elemtentos como as palavras nessa tupla.
+# O código dele é tipo o seguinte:
+#
+# palavras = ("coisa", "casa", "tempo", "ano", "dia", "vez", "homem", "senhor", "senhora", "moço", "moça")
+# for p in palavras:
+#    print(f"\nNa palavra '{p.upper()}' temos ", end="")
+#    for letra in p:
+#         if letra.lower() in "aáâeéêiíîoóôuúû":
+#             print(letra, end=" ")
+
+
