@@ -30,5 +30,5 @@ for palavra in palavras:
 #    for letra in p:
 #         if letra.lower() in "aáâeéêiíîoóôuúû":
 #             print(letra, end=" ")
-
+#
 
