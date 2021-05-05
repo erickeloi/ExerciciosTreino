@@ -11,10 +11,10 @@ while continuar != 'N':
     
     valor_digitado = int(input("Digite um valor: "))
     lista_valores.append(valor_digitado)
-    continuar = str(input("Quer continuar? [S/N]")).strip().upper()[0]
+    continuar = str(input("Quer continuar? [S/N] ")).strip().upper()[0]
     
     if continuar not in 'SN':
-        continuar = str(input("Opção inválida,\nQuer continuar? [S/N]")).strip().upper()[0]
+        continuar = str(input("Opção inválida,\nQuer continuar? [S/N] ")).strip().upper()[0]
         
 lista_organizada = lista_valores[:]
 lista_organizada.sort(reverse=True)
