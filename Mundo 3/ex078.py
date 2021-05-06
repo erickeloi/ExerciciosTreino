@@ -5,7 +5,8 @@ lista_valores = list()
 maior_valor = 0
 menor_valor = 0
 for c in range(0, 5):
-    numero_digitado = (int(input(f"Digite o {c+1}º valor: ")))
+
+    numero_digitado = (int(input(f"Digite o {c + 1}º valor: ")))
     lista_valores.append(numero_digitado)
     if c == 0:
         menor_valor = numero_digitado
@@ -13,8 +14,19 @@ for c in range(0, 5):
         maior_valor = numero_digitado
     if numero_digitado < menor_valor:
         menor_valor = numero_digitado
+
 lista_organizada = lista_valores[:]
 lista_organizada.sort()
-print(f"O maior valor digitado foi: {lista_organizada[4]}, e ele estava na {lista_valores.index(maior_valor)+1}° Posição")
-print(f"O menor valor digitado foi: {lista_organizada[0]}, e ele estava na {lista_valores.index(menor_valor)+1}° Posição")
+
+print(f"O maior valor digitado foi: {lista_organizada[4]}, e ele estava nas posições: ", end="")
+for contador, valor in enumerate(lista_valores):
+    if valor == maior_valor:
+        print(f"{contador+1}...", end="")
+print("")
+
+print(f"O menor valor digitado foi: {lista_organizada[0]}, e ele estava nas posições: ", end="")
+for contador, valor in enumerate(lista_valores):
+    if valor == menor_valor:
+        print(f"{contador+1}...", end="")
+print("")
 
