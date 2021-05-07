@@ -41,12 +41,14 @@ print(f"Essas pessoas, com seus pesos foram: {lista_pessoas}")
 print(f"As pessoas mais pesadas são: ", end="")
 for pessoa in lista_pessoas:
     if pessoa[1] == maior_peso:
-        print(f"{pessoa[0]} com {pessoa[1]} KG...", end="")
+        print(f"{pessoa[0]}...", end="")
+print(f"com {maior_peso} KG")
 print("")
 
 print(f"As pessoas mais leves são: ", end="")
 for pessoa in lista_pessoas:
     if pessoa[1] == menor_peso:
-        print(f"{pessoa[0]} com {pessoa[1]} KG...", end="")
+        print(f"{pessoa[0]} ", end="")
+print(f"com {menor_peso} KG")
 print("")
 
