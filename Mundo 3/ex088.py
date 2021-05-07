@@ -4,15 +4,29 @@
 from random import randint
 from time import sleep
 
+sorteio = contador = 0
+mega_sena = list()
+
 numero_de_sorteios = int(input("Digite o número de sorteios: "))
-sorteio = 0
+
 print(f"Sorteando {numero_de_sorteios} jogos")
 
 while sorteio != numero_de_sorteios:
-    mega_sena = [randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60)]
+    
+    while sorteio != numero_de_sorteios:
+        
+        palpite = randint(1, 60)
+        if palpite not in mega_sena:
+            mega_sena.append(palpite)
+            contador += 1
+        if contador >= 6:
+            contador = 0
+            break
+
     print(f"Jogo {sorteio+1}: {mega_sena}")
+    
+    mega_sena.clear()
     sorteio += 1
     sleep(1)
-
+    
 print("Fim do sorteio!")
-
