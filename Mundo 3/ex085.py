@@ -25,3 +25,25 @@ for numero in lista_valores:
 
 print()
 
+#  Com a resolução do professor: 
+
+# lista_valores = [[], []]
+# for contador in range(0, 7):
+#     valor = int(input(f"Digite o {contador+1}° valor: "))
+#     if valor % 2 == 0:
+#         lista_valores[0].append(valor)
+#     if valor % 2 == 1:
+#         lista_valores[1].append(valor)
+#
+# print("Processando...")
+#
+# print(f"A lista completa foi: {lista_valores}")
+#
+# lista_valores[0].sort()
+# lista_valores[1].sort()
+
+
+# print(f"A lista de números pares é: {lista_valores[0]}")
+# print(f"A lista de números impares é: {lista_valores[1]}")
+
+
