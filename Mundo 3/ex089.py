@@ -40,3 +40,37 @@ for contador, aluno in enumerate(alunos_info):
     print(f"A média do aluno {nome_do_aluno} é {nota_media}")
 
 print(f"A lista de Boletim escolar é: {alunos_info}")
+
+
+# Mesmo a resolução do guanabara foi meio confusa na ultima parte, 
+# Mas o código dele ficou parecido com isso:
+
+# 
+# dados = []
+# while True:
+# 	cont = ' '
+# 	nome = str(input('nome: '))
+# 	nota1 = float(input('nota 1: '))
+# 	nota2 = float(input('nota 2: '))
+# 	media = (nota1 + nota2) / 2 
+# 	dados.append([nome, [nota1, nota2], media])
+# 	cont = str(input('\nQuer continuar? [s/n]: ')).strip()
+# 	if cont == 'n':
+# 		break
+
+# print('---' * 11)
+# print(f'{"Nº":<4} {"Nome":<10} {"Média":>8}')
+# print('---' * 11)
+
+# for i, a in enumerate(dados):
+# 	print(f'{i:<4} {a[0]:<10} {a[2]:>8.1f}')
+
+# while True:
+# 	opc = int(input('\nMostrar nota de qual aluno? (999 interrompe o programa) '))
+
+# 	if opc <= len(dados)-1:
+# 		print(f'\nNotas de {dados[opc][0]}: {dados[opc][1]}')
+
+# 	if opc == 999:
+# 		print('\n> Volte Sempre <')
+# 		break
