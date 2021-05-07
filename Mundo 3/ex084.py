@@ -30,7 +30,7 @@ while True:
     contador_pessoas += 1
 
     continuar = str(input("Quer continuar? [S/N]: ")).strip().upper()[0]
-    if continuar not in 'SN':
+    while continuar not in 'SN':
         continuar = str(input("Opção inválida,\n Quer continuar? [S/N]: "))
     if continuar == 'N':
         break
