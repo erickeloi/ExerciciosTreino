@@ -2,6 +2,9 @@
 # Faça um programa que tenha uma função chamada maior(), que receba vários parâmetros com valores inteiros.
 # Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
 
+# O Guanabara deixa apenas valores fixos, 
+# não pedindo para o usuário adicionar diversos valores, eventualmente eu melhoro esse programa.
+
 from random import randint
 
 
