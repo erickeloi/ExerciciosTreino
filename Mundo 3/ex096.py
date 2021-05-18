@@ -7,7 +7,7 @@ def area(comprimento, largura):
     print(f"O terreno de dimensões: {comprimento}m x {largura}m tem área de {area}m²")
 
 
-comprimento = int(input("Digite o Comprimento do terreno (em metros): "))
-largura = int(input("Digite a Largura do terreno (em metros): "))
+comprimento = float(input("Digite o Comprimento do terreno (em metros): "))
+largura = float(input("Digite a Largura do terreno (em metros): "))
 area(comprimento, largura)
 
