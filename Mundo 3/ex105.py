@@ -71,5 +71,12 @@ while True:
     if numero == 999:
         break
     notas_alunos.append(numero)
+situacao = str(input("Quer Mostrar a Situação das notas ? [S/N]")).strip().upper()[0]
+while situacao not in 'SN':
+    situacao = str(input("Quer Mostrar a Situação das notas ? [S/N]")).strip().upper()[0]
+if situacao == 'S':
+    situacao = True
+elif situacao == 'N':
+    situacao = False
 
-print(notas(notas_alunos, situacao=True))
+print(notas(notas_alunos, situacao))
