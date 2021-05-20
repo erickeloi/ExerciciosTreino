@@ -1,4 +1,5 @@
-# Exercício Python 108: Adapte o código do desafio #107,
+# Exercício Python 108: Formatando Moedas em Python
+# Adapte o código do desafio #107,
 # criando uma função adicional chamada moeda() que consiga mostrar os números como um valor monetário formatado.
 
 from ex108 import moeda
