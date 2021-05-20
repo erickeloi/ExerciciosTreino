@@ -16,19 +16,19 @@ while True:
     if operacao == 0:
         break
     elif operacao == 1:
-        valor = float(input("Digite um valor para ser dobrado: "))
-        print(f"O dobro de {valor} é {moeda.moeda(moeda.dobro(valor))}")
+        valor = float(input("Digite um valor para ser dobrado: R$"))
+        print(f"O dobro de {moeda.moeda(valor)} é {moeda.moeda(moeda.dobro(valor))}")
     elif operacao == 2:
-        valor = float(input("Digite um valor para ser reduzido a metade: "))
-        print(f"A metade de {valor} é {moeda.moeda(moeda.metade(valor))}")
+        valor = float(input("Digite um valor para ser reduzido a metade: R$"))
+        print(f"A metade de {moeda.moeda(valor)} é {moeda.moeda(moeda.metade(valor))}")
     elif operacao == 3:
-        valor = float(input("Digite o valor base: "))
+        valor = float(input("Digite o valor base: R$"))
         porcentagem = float(input("Digite a porcentagem de acrescimo: "))
-        print(f"O valor {valor} tendo um acrescimento de {porcentagem}% é: {moeda.moeda(moeda.aumentar(valor, porcentagem))}")
+        print(f"O valor {moeda.moeda(valor)} tendo um acrescimento de {porcentagem}% é: {moeda.moeda(moeda.aumentar(valor, porcentagem))}")
     elif operacao == 4:
-        valor = float(input("Digite o valor base: "))
+        valor = float(input("Digite o valor base: R$"))
         porcentagem = float(input("Digite a porcentagem de decrescimo: "))
-        print(f"O valor {valor} tendo um decrescimo de {porcentagem}% é: {moeda.moeda(moeda.aumentar(valor, porcentagem))}")
+        print(f"O valor {moeda.moeda(valor)} tendo um decrescimo de {porcentagem}% é: {moeda.moeda(moeda.aumentar(valor, porcentagem))}")
 
     else:
         print("Opção inválida!")
