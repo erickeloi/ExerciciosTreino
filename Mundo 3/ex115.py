@@ -1,5 +1,8 @@
-# Exercício Python 115b: Arquivos com Python
-# Vamos ver como fazer acesso a arquivos usando o Python.
+# Exercício Python 115:
+# Crie um Pequeno sistemas Modularizado
+# que permita cadastrar pessoas pelo seu nome e idade em um arquivo de texto simples.
+# O sistemas terá 3 opções:
+# Listar, Cadastrar, Sair
 
 from ex115.menu.menu import *
 from time import sleep
