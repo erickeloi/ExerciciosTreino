@@ -3,14 +3,14 @@
 # só que fazendo a validação para aceitar apenas um valor numérico.
 # Ex: n = leiaInt('Digite um n: ')
 
-def leiaInt(numero: str):
+def leiaInt():
+    numero = str(input("Digite um número inteiro: "))
     if numero.isnumeric():
-        print(f"Você digitou o número {numero}")
+        print(f"Você digitou o número {numero}")    
+        return numero
     else:
         print("ERRO! Digite valor apenas numerico")
-        numero = str(input("Digite um número: "))
-        leiaInt(numero)
+        leiaInt()
 
 
-numero = str(input("Digite um número: "))
-leiaInt(numero)
+leiaInt()
