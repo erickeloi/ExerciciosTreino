@@ -1,5 +1,5 @@
-# Exercício Python 115:
-# Crie um Pequeno sistemas Modularizado
+# Exercício Python 115: Crie um pequeno sistema modularizado
+# Crie um Pequeno sistema Modularizado
 # que permita cadastrar pessoas pelo seu nome e idade em um arquivo de texto simples.
 # O sistemas terá 3 opções:
 # Listar, Cadastrar, Sair
