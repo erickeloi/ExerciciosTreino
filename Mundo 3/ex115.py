@@ -11,8 +11,11 @@ while True:
     if response == 1:
         try:
             with open(arquivo_diretorio, "r") as arquivo:
-                for texto in arquivo:
-                    print(texto, end='')
+                for linha in arquivo:
+                    informacao = linha.split(",")
+                    informacao[1] = informacao[1].replace("\n", "")
+                    print(f"{informacao[0]:<30} Idade: {informacao[1]:>3} anos")
+
                 sleep(5)
         except:
             print(f"Ainda Não existem pessoas cadastradas")
