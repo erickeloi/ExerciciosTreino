@@ -34,4 +34,6 @@ def menu():
     print("Menu Principal".center(45))
 
     options_list()
-    options_value()
+    option = options_value()
+
+    return option
