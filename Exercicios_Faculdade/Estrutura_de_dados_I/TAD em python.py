@@ -13,6 +13,9 @@
 
 #   Faça um pequeno programa para testar o seu TAD
 
+# TO-DO:
+    # Fazer um arquivo separado para o TAD e Organizar melhor atributos e interfaces
+
 
 class NumeroComplexo:
     def __init__(self, real: int, img: int): 
