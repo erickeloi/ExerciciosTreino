@@ -1,5 +1,19 @@
 # TAD em python
 
+#Implemente um TAD Número Complexo
+#   ¨cada número possui os campos real e imaginário¨
+
+#   Implemente as operações:
+
+#   Inicializa: atribui valores para os campos
+#   Imprime: imprime o número da forma “R + Ci”
+#   Copia: Copia o valor de um número para outro
+#   Soma: Soma dois números complexos
+#   EhReal: testa se um número é real
+
+#   Faça um pequeno programa para testar o seu TAD
+
+
 class NumeroComplexo:
     def __init__(self, real: int, img: int): 
         self.real = real
