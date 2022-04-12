@@ -23,9 +23,17 @@ def palindromo(palavra: str):
     
 #from TAD_CONCATENAR import *
 
-palavra1 = "asa"
-palavra2 = "asa"
+palavra1 = "belem"
+palavra2 = "para"
+palavra3 = "brazil"
 
-print(compara(palavra1, palavra2))
+palavra1 = concatena(palavra1, palavra2)
+print(palavra1)
+palavra1 = concatena(palavra1, palavra3)
+print(palavra1)
 
-print(palindromo(palavra1))
+
+#print(compara(palavra1, palavra2))
+
+#print(palindromo(palavra1))
+
