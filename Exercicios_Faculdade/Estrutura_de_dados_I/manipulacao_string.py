@@ -1,5 +1,6 @@
 # TAD - Manipulação de String
 #   INTERFACES
+    #   TO DO: Colocar as strings como "list" para entender como funciona a estrutura de cada função
     #   TO DO: Implementar funções de caracteres ( char, string, concatenar, copiar )
 
 def compara(palavra1: str, palavra2: str):
