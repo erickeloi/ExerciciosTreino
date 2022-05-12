@@ -48,9 +48,27 @@ class Pilha():
             contador += 1 
         print()
         
+def dec_to_bin(numero: int):
+    if numero < 0:
+        print("Erro: O Número deve ser maior que zero!")
+    else:
+        restos = []
+        while True:
+            resto = numero % 2
+            numero = numero // 2
+
+            restos += [resto]
+
+            if numero == 1:
+                restos += [1]
+                return restos[::-1]
+            
+
+            
+a = dec_to_bin(10)
+print(a)
 
 pilha = Pilha()
-
 pilha.insere('ESTE')
 pilha.insere('EXERCICIO')
 pilha.insere('E')
