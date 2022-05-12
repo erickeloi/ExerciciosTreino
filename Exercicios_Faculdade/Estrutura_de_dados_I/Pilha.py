@@ -2,7 +2,7 @@ class Pilha():
     def __init__(self):
         self.topo = 0
         self.elementos = []
-    def insere(self, elemento: str):
+    def insere(self, elemento):
         self.elementos += [elemento]
         self.topo += 1
     def imprimir(self):
@@ -47,28 +47,31 @@ class Pilha():
             print(palavras_invertidas_final[contador], end=' ')
             contador += 1 
         print()
-        
+    def invertido(self):
+        return self.elementos[::-1]
+
+
 def dec_to_bin(numero: int):
     if numero < 0:
         print("Erro: O Número deve ser maior que zero!")
     else:
-        restos = []
+        restos = Pilha()
         while True:
             resto = numero % 2
             numero = numero // 2
 
-            restos += [resto]
+            restos.insere(resto)
 
             if numero == 1:
-                restos += [1]
-                return restos[::-1]
+                restos.insere(1)
+                return restos.invertido()
             
 
-            
 a = dec_to_bin(10)
-print(a)
+print(a)      
 
 pilha = Pilha()
+
 pilha.insere('ESTE')
 pilha.insere('EXERCICIO')
 pilha.insere('E')
