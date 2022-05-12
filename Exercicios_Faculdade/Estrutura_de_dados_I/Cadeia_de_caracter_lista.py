@@ -1,11 +1,10 @@
 class Lista:
     def __init__(self):
         self.MaxTam = 1000
-        
+        self.items = []
         self.Primeiro = 0
         self.Ultimo = 0
-        
-        self.items = []
+
 
 def Vazia(lista: Lista):
     if lista.Primeiro == lista.Ultimo:
@@ -14,7 +13,8 @@ def Vazia(lista: Lista):
         return False
     
 def FLVazia(lista: Lista):
-    lista.Primeiro = lista.Ultimo
+    lista.Primeiro = 0
+    lista.Ultimo = lista.Primeiro
     lista.items = []
 
 def insere(valor: str, lista: Lista):
@@ -23,9 +23,14 @@ def insere(valor: str, lista: Lista):
     else:
         lista.items[lista.Ultimo] = valor
         lista.Ultimo += 1
+        
+# INACABADO
+def retira(lista: Lista, indice: int):
+    if Vazia(lista):
+        print("Lista Vazia, Não é possível remover itens!")
+    else:
+        item_removido = lista.items[indice]
+        lista.items -= lista.items[indice]
+        return item_removido
+    
 
-def retira(self)
-        
-        
-        
-        
