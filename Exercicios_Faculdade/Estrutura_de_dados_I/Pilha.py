@@ -11,6 +11,10 @@ class Pilha():
             print(self.elementos[contador], end= ' ')
             contador += 1 
         print()
+    def pop(self):
+        aux = self.elementos[-1]
+        self.elementos = self.elementos[:-1]
+        return aux
     def mostrar_palavras_invertidas(self):
         palavras_invertidas_final = []
         palavra = []
@@ -45,7 +49,6 @@ class Pilha():
         print()
         
 
-
 pilha = Pilha()
 
 pilha.insere('ESTE')
@@ -55,5 +58,6 @@ pilha.insere('MUITO')
 pilha.insere('FACIL')
 print("Mostrando os elementos da pilha... ")
 pilha.imprimir()
-print("Invertendo as Palavras da pilha...")
+print("Invertendo as Palavras da pilha... ")
 pilha.mostrar_palavras_invertidas()
+print(f"Desempilhando... (pop): {pilha.pop()}")
