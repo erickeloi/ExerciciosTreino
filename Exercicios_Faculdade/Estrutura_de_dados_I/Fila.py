@@ -1,11 +1,11 @@
 class Node():
+    """ Nós, que vão encadear a fila"""
     def __init__(self, data):
         self.data = data
         self.next = None
 
-
-# ate as 8:00
 class Fila():
+    """ Estrutura de dados 'FILA'/'QUEUE' """
     def __init__(self):
         self._size = 0
 
@@ -13,6 +13,7 @@ class Fila():
         self.last = self.first
     
     def enfileira(self, elemento):
+        """ Basicamente função 'PUSH', insere um elemento no fim da fila"""
         node = Node(elemento)
 
         if self.last == None:
@@ -27,7 +28,8 @@ class Fila():
 
         self._size += 1
 
-    def pop(self):
+    def desenfileira(self):
+        """ Basicamente função 'POP', tira o elemento do começo da fila"""
         if self.first != None:
             elem = self.first.data 
             self.first = self.first.next
@@ -41,7 +43,7 @@ class Fila():
         # implementar def fura fila:
         # colocar um no começo da fila usando alocação dinamica
     def fura_fila(self, data):
-        """Insere um elemento no começo da fila"""
+        """ Insere um elemento no começo da fila """
         node = Node(data)
 
         aux_pointer = self.first
@@ -50,35 +52,38 @@ class Fila():
 
         self._size += 1
             
-    def __str__(self):
-        r = ""
-        pointer = self.first
-        while(pointer):
-            r = r + f'{pointer.data}' + " "
-            pointer = pointer.next
-
-        return r   
+    #def __str__(self):
+    #""" Mostra a pilha ao usuário ao usar a função print() na classe """
+    #    r = ""
+    #    pointer = self.first
+    #    while(pointer):
+    #        r = r + "" + f'{pointer.data}' + " "
+    #        pointer = pointer.next
+    #    return r   
 
     def mostra_fila(self):
+        """ Mostra a pilha ao usuário, Basicamente a função Print """
         r = ""
         pointer = self.first
         while(pointer):
-            r = r + f'{pointer.data}' + " "
+            r = r + "" + f'{pointer.data}' + " "
             pointer = pointer.next
-
-        return r            
+        print(r)          
 
     def __len__(self):
+        """ Mostra o tamanho da fila ao usar a função len() na fila """
         return self._size
 
 fila = Fila()
 fila.enfileira(1)
 fila.enfileira(2)
 fila.enfileira(3)
-print(fila)
+fila.mostra_fila()
 
 fila.fura_fila(5)
-print(fila)
+fila.mostra_fila()
 
-fila.pop()
-print(fila)
+fila.desenfileira()
+fila.mostra_fila()
+
+print(f"A fila possui: {len(fila)} elemento(s)")
