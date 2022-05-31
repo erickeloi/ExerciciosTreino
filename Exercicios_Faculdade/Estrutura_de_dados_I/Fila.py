@@ -3,18 +3,21 @@ class Node():
         self.data = data
         self.next = None
 
-class Filaa():
+
+# ate as 8:00
+class Fila():
     def __init__(self):
         self._size = 0
 
         self.first = None
-        self.last = None
+        self.last = self.first
     
     def enfileira(self, elemento):
         node = Node(elemento)
 
         if self.last == None:
             self.last = node
+
         else:
             self.last.next = node
             self.last = node
@@ -29,92 +32,53 @@ class Filaa():
             elem = self.first.data 
             self.first = self.first.next
 
-            self._size = self._size - 1
+            self._size -= 1
 
             return elem
         else:
             print("Erro! Pilha Vazia")
 
-    def __repr__(self):
+        # implementar def fura fila:
+        # colocar um no começo da fila usando alocação dinamica
+    def fura_fila(self, data):
+        """Insere um elemento no começo da fila"""
+        node = Node(data)
+
+        aux_pointer = self.first
+        self.first = node
+        self.first.next = aux_pointer
+
+        self._size += 1
+            
+    def __str__(self):
         r = ""
         pointer = self.first
         while(pointer):
             r = r + f'{pointer.data}' + " "
             pointer = pointer.next
 
+        return r   
+
+    def mostra_fila(self):
+        r = ""
+        pointer = self.first
+        while(pointer):
+            r = r + f'{pointer.data}' + " "
+            pointer = pointer.next
+
+        return r            
+
     def __len__(self):
         return self._size
 
-fila = Filaa()
+fila = Fila()
 fila.enfileira(1)
 fila.enfileira(2)
 fila.enfileira(3)
 print(fila)
 
+fila.fura_fila(5)
+print(fila)
 
-
-
-
-
-
-
-
-
-
-
-
-
-class Fila():
-    def __init__(self):
-        self._size = 0
-
-        self.elementos = []
-        self.frente = 0
-        self.tras = self.frente
-        self.maxtam = 3
-        contador = self.maxtam
-        while contador != 0:
-            self.elementos += [None]
-            contador -= 1
-        print(self.elementos)
-    def enfileira(self, elemento):
-        if ((self.tras+1 % self.maxtam) == self.frente):
-            print("Erro, a fila está cheia!")
-        else:
-            self.elementos = self.elementos[self.tras:self.tras] = [elemento]
-            self.tras = (self.tras + 1) // self.maxtam
-
-    def esvaziarFila(self):
-        self.frente = 0
-        self.tras = self.frente
-        self.elementos = []
-
-    def __len__(self):
-        return self._size
-
-    def isFilaVazia(self):
-        return self.frente == self.tras
-
-    def imprime(self):
-        print("[", end="")
-        contador = self.maxtam
-        for elemento in self.elementos:
-            if elemento == None:
-                contador -= 1
-                continue
-            else:
-                if contador != -1:
-                    print(elemento, end=",")
-                else:
-                    print(elemento, end="")
-            contador -= 1
-        print("]")
-
-
-#fila = Fila()
-#fila.enfileira(1)
-#fila.enfileira(2)
-#fila.enfileira(3)
-#fila.enfileira(4)
-#fila.imprime()
-
+fila.pop()
+print(fila)
