@@ -1,5 +1,3 @@
-from re import I
-
 
 class Node():
     """ Nós, que vão encadear a fila"""
@@ -71,72 +69,62 @@ class Fila():
     
     def mostra_fila(self):
         """ Mostra a pilha formatada ao usuário, Basicamente a função Print """
-        
-        print("Sites cadastrados: ")
+        print("Mostrando sites cadastrados... ")
         r = ""
         pointer = self.first
         while(pointer):
             r = r + f'{pointer.data[0]}' + ", "
             pointer = pointer.next
         print(r)
-    
-    
 
     def busca_site(self, nome: str):
-        """Função que busca um site na fila, e se achar, move o Nó para o inicio da fila"""
-        contador = 0
-
-        pointer = self.first
-        pointer_last = self.first
-        while pointer != None:
-            if contador > 0:
-                pointer_last = pointer_last.next
-
-            if pointer.data[0] == nome:
-                print("Site encontrado!")
-                print(f"link: {pointer.data[1]}")
-
-                aux = pointer.data
-                pointer_last.next = pointer.next
-                return None
-            else:
-                pointer = pointer.next
-                contador += 1
-        print("Site não encontrado! \ Site não cadastrado!")
-
-    def busca_site_aux(self, nome: str):
         index, ponteiro = self._index(nome)
         if index == None:
             print("Elemento não encontrado")
-            
         elif index == 0:
             print("Site encontrado!")
             print(f"Link: {ponteiro.data[1]}")
-        elif index == self._size:
-            
+        elif index < self._size:
+            print("Site encontrado!")
+            print(f"Link: {ponteiro.data[1]}")
             c = 0
-            pointeiro_aux = self.first
 
-            while c < self._size - 1:
+            pointeiro_aux = self.first
+            while c < index - 1:
                 c += 1
                 pointeiro_aux = pointeiro_aux.next
-            # Penultimo elemento = ponteiro_aux
-            # O penultimo elemento passa a ser o ultimo
-            pointeiro_aux.next = None
-            self.last = pointeiro_aux
+            # elemento anterior ao desejado = ponteiro_aux
+            data_aux = pointeiro_aux.next.data
+            pointeiro_aux.next = pointeiro_aux.next.next
 
-            self.fura_fila(ponteiro.data[0], ponteiro.data[1])
+            self.fura_fila(data_aux[0], data_aux[1])
+        elif index == self._size:
+            print("Site encontrado!")
+            print(f"Link: {ponteiro.data[1]}")
+            c = 0
+
+            pointeiro_aux = self.first
+            while c < index - 1:
+                c += 1
+                pointeiro_aux = pointeiro_aux.next
+            # elemento anterior ao desejado = ponteiro_aux
+            data_aux = pointeiro_aux.next.data
+            pointeiro_aux.next = None
+            pointeiro_aux = self.last
+            self.fura_fila(data_aux[0], data_aux[1])
+
 
     def _index(self, nome: str):
         """Dado um nome, procura e retorna em qual index esse nome está alocado"""
         pointer = self.first
+        
         contador = 0
         while pointer:
             if pointer.data[0] == nome:
                 return contador, pointer
             else:
                 pointer = pointer.next
-                contador += contador
+                contador += 1
 
         print("Elemento não encontrado na lista!")
         return None, None
@@ -153,8 +141,25 @@ bd.insere_site("netflix", "https://www.netflix.com/")
 bd.insere_site("amazon", "https://www.amazon.com.br")
 bd.insere_site("pudim", "http://www.pudim.com.br")
 
+print("Mostrando a o banco de dados (fila)...")
 bd.mostra_fila()
 
-bd.busca_site_aux("pudim")
+print("---")
+print("Buscando por Pudim...")
+bd.busca_site("pudim")
+print("---")
+bd.mostra_fila()
+
+print("---")
+print("Buscando por Twitter...")
+bd.busca_site("twitter")
+print("---")
+
+bd.mostra_fila()
+
+print("---")
+print("Buscando por Amazon...")
+bd.busca_site("amazon")
+print("---")
 
 bd.mostra_fila()
