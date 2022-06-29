@@ -1,0 +1,62 @@
+-- Consultar Filmes Lançados apartir de 1998:
+Select *
+from filmes
+where ano_de_lancamento > 1998
+-- Clube da Luta e Blade Runner.
+
+-- Quanto custa os planos da netflix atualmente ?
+select nome, preco as 'Preço em Reais'
+from planos
+
+-- Consultar Filmes do genero comédia:
+Select f.*
+from filmes_generos fg
+join filmes f on f.id_filme = fg.id_filme
+where fg.id_genero = 10
+-- O MESMO RESULTADO PODE SER ALCANÇADO PELA QUERY:
+Select f.*
+from generos g
+join filmes_generos fg on fg.id_genero = g.id_genero
+join filmes f on f.id_filme = fg.id_filme
+where g.nome = 'Comedia'
+-- Forest Gump
+
+
+-- Consultar Filmes do genero drama:
+Select f.*
+from filmes_generos fg
+join filmes f on f.id_filme = fg.id_filme
+where fg.id_genero = 7
+-- obs: todos são filmes de drama
+
+
+-- Busque filmes do diretor David Fincher !!!
+Select f.*
+from diretores d
+join filmes_diretores fd on fd.id_diretor = d.id_diretor 
+join filmes f on f.id_filme = fd.id_filme
+where d.nome = 'David Fincher'
+
+
+-- Busque filmes do ator BRAD PITT !!!
+Select f.*
+from atores a
+join filmes_atores fa on fa.id_ator = a.id_ator 
+join filmes f on f.id_filme = fa.id_filme
+where a.nome = 'Brad Pitt'
+
+
+-- Vizando fazer uma promoção para reter os assinantes novos, busque os 5 usuários mais recentes
+Select id_usuario, nome, email, criacao_data
+from usuarios 
+order by criacao_data DESC
+limit 5
+
+-- Vizando fazer um lembrete para os perfis de usuários terminarem de assistir seus filmes, 
+-- busque os perfis de usuários com que viram qualquer filme por pelo menos 30 minutos e não terminaram.
+
+Select p.nome, f.titulo, v.tempo_assistido
+from perfis p
+join visualizacoes v on v.id_perfil = p.id_perfil
+join filmes f on f.id_filme = v.id_filme
+where v.tempo_assistido > 30
