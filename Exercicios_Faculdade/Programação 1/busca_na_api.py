@@ -25,6 +25,6 @@ def get_api_info(cnpj_id):
 
     if json_infos['status'] == 'ERROR' and json_infos['message'] == 'CNPJ inválido':
         print(f"Erro!\nCnpj informado: {cnpj_id},\nCnpj Inválido.\n")
-        return None
+        return 'CNPJ Invalido'
 
     return json_infos
