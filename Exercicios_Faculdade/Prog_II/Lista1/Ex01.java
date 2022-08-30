@@ -3,7 +3,7 @@
 1) Ler dois valores inteiros e apresentar sua: SOMA=xx, DIFERENÇA=xx, PRODUTO=xx, e MÉDIA=xx.
 
  */
-package javaapplication;
+package javaapplication3;
 import java.util.Scanner;
 /**
  *
@@ -19,7 +19,10 @@ public class Ex01 {
             System.out.println("Digite o segundo numero inteiro: ");
             int n2 = myObj.nextInt();  // Read user input
             
-            System.out.println("A soma de " +n1+" + "+n2+" é igual a: " + (n1+n2) );  // Output user input
+            System.out.println(n1+" + "+n2+" = " + (n1+n2) );  // Output user input
+            System.out.println(n1+" - "+n2+" = " + (n1-n2) );  // Output user input
+            System.out.println(n1+" * "+n2+" = " + (n1*n2) );  // Output user input
+            System.out.println("("+n1+" + "+n2+")/2"+" = " + ((n1+n2)/2) );  // Output user input
         
     }
 }
